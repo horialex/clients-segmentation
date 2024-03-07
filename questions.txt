@@ -9,16 +9,20 @@ We want to group the clients in certain clusters based on their shoping behaviou
 
 
 **Insights**
+It seems that this dataset is not just about the sales records but it is stock management situation of the company
+
 1.We don't really need the Description column for these predictions - for clustering this is not needed -
  for association problem it might be needed
 2. We assume that the current day is the day after the last occurance in the data field or from the last order - 7 June 2011
 3. We have a besides normal orders a lot of other types of orders like bank charges, amazon fee, carrige taxes, etc. These are not 
 relevant for our problem and we might get rid of  them
 4. We can observe that are non products related rows where we have the postage info, amazon fee, and other charges, most probably are irelevant
-for clients shoping behaviours. (more than 10%)
-5. We can observe at country column tht most of the customers are from UnitedKingdom (495478), so we could separate this column in two categories 
+for clients shoping behaviours. (more than 10%) ~22k
+5. We can observe at country column that most of the customers are from UnitedKingdom (495478), so we could separate this column in two categories 
 : UK and RestOfWorld 
-6. We observe that we have negative quantitys, those are canceled orders or ?damaged?. (datas that contain customer ID's)
+6. We observe that we have negative quantitys, those are canceled orders or ?damaged?. (datas that contain customer ID's) - We need to think what do we do with canceld orders this might be 
+and indicator of bad customer practices
+7. We can remove the observations that don't have customer id
 
 
 
@@ -43,7 +47,22 @@ What is the number of days passed from the last order for a customer? - days sin
 2. Does the country influence the shopping behaviours?
 
 3. How should we deal with the datas without customerID, why we have so manny null Datas at CustomerID? should we group them as (unregistred_custemers)?
+ - we need to remove it since it is not relevant to customer clustering/segmentation
 
 4. Why we have quantity values with - , prices with - ?
+   - we need to remove it since it is not relevant to customer clustering/segmentation
 
 5. What should we do with the data belonging to the stock management and not related to the clients?
+   - we need to remove it since it is not relevant to customer clustering/segmentation
+
+6. Do we have 0 quntities? 
+  - no
+
+7. What should we do with rows with unit price = 0?
+ - we remove them
+
+8. What do we do with negative quantitiy ?
+ -  we remove them
+
+
+
