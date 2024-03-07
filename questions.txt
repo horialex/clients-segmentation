@@ -1,0 +1,49 @@
+*** Client Segmentation***
+
+Keggle url: https://www.kaggle.com/code/analystoleksandra/rfm-analysis-and-k-means-clustering-comparison
+
+
+**Goal**
+We want to group the clients in certain clusters based on their shoping behaviours
+
+
+
+**Insights**
+1.We don't really need the Description column for these predictions - for clustering this is not needed -
+ for association problem it might be needed
+2. We assume that the current day is the day after the last occurance in the data field or from the last order - 7 June 2011
+3. We have a besides normal orders a lot of other types of orders like bank charges, amazon fee, carrige taxes, etc. These are not 
+relevant for our problem and we might get rid of  them
+4. We can observe that are non products related rows where we have the postage info, amazon fee, and other charges, most probably are irelevant
+for clients shoping behaviours. (more than 10%)
+5. We can observe at country column tht most of the customers are from UnitedKingdom (495478), so we could separate this column in two categories 
+: UK and RestOfWorld 
+6. We observe that we have negative quantitys, those are canceled orders or ?damaged?. (datas that contain customer ID's)
+
+
+
+**Questions**
+
+1. Does the order date matter ?  Does the year, month, day and hour matter in any significant way? Like does it matter if the 
+order was placed on summer or winter season / holliday season? How many years do we have in the dataset? 
+* It seems we have orders from only two years: 2010 - 2011
+
+2010 
+ - December
+
+2011 
+ - January - June
+
+We have data from december 1st December 2010 until 6th of June 2011  - ~7 months
+What month has the largest number of orders as a qunatity and money
+What the frequency of orders per customer?
+What is the frequency of orders per product? - frequency of orders
+What is the number of days passed from the last order for a customer? - days since the last order
+
+2. Does the country influence the shopping behaviours?
+
+3. How should we deal with the datas without customerID, why we have so manny null Datas at CustomerID? should we group them as (unregistred_custemers)?
+
+4. Why we have quantity values with - , prices with - ?
+
+5. What should we do with the data belonging to the stock management and not related to the clients?
