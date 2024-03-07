@@ -1,4 +1,4 @@
-## Client Segmentation Clustering ML##
+## Client Segmentation Clustering ML
 
 To install the project you need to install miniconda locally than you need to do the following actions:
 
