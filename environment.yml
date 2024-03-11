@@ -7,6 +7,6 @@ dependencies:
   - numpy
   - pandas
   - matplotlib
-  - seaborn
+  - conda-forge::seaborn
   - scikit-learn
   - conda-forge::jupyterlab
