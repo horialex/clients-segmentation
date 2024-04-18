@@ -1,5 +1,8 @@
 ## Client Segmentation Clustering ML
 
+We have a dataset about the invoices of a company. The dataset contiains data about orders, quantities customers etc. We will try to 
+cluster the customers of this company based on their spending behaviour
+
 To install the project you need to install miniconda locally than you need to do the following actions:
 
 minicoda source: https://docs.anaconda.com/free/miniconda/miniconda-install
